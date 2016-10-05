@@ -23,6 +23,10 @@ public class ActivityB extends AppCompatActivity implements SharedFragment.Injec
     @Inject
     SingletonBean singleton;
 
+    ComponentActivityB component =
+            Injector.getSingletonComponent()
+                    .newComponent(new ModuleB(), new SharedModule());
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +38,6 @@ public class ActivityB extends AppCompatActivity implements SharedFragment.Injec
 
     @Override
     public void inject(SharedFragment fragment) {
-        ComponentActivityB component =
-                Injector.getSingletonComponent()
-                        .newComponent(new ModuleB(), new SharedModule());
         component.inject(this);
         component.inject(fragment);
     }
