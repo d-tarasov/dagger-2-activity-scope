@@ -12,6 +12,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="today.tarasov.activityscope.ActivityA">
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="uninitialized"
+        tools:ignore="HardcodedText" />
+
     <fragment
         android:id="@+id/fragment"
         class="today.tarasov.activityscope.SharedFragment"

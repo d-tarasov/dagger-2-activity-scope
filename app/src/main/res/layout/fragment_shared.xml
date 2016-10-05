@@ -5,5 +5,4 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:text="uninitialized"
-    android:textSize="26sp"
     tools:ignore="HardcodedText" />
